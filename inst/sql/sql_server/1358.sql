@@ -547,7 +547,7 @@ from
 JOIN #Codesets codesets on ((m.measurement_concept_id = codesets.concept_id and codesets.codeset_id = 1))
 ) C
 
-WHERE (C.value_as_number >= 0.5200 and C.value_as_number <= 8.2900)
+WHERE (C.value_as_number >= 0.5200 and C.value_as_number <= 2.5900)
 AND C.unit_concept_id in (8753)
 -- End Measurement Criteria
 
