@@ -1,0 +1,22 @@
+Package: PceCohortDiagnostics
+Type: Package
+Title: Cohort Diagnostics component for PCE arm of PROTEUS study
+Version: 0.0.1
+Author: Gowtham Rao [aut, cre]
+Maintainer: Gowtham A. Rao <rao@ohdsi.org>
+Description: A R package, to be used to capture the cohorts being diagnosed as part of cohort diagnostics in OHDSI studyathon 2020
+Depends:
+    DatabaseConnector (>= 2.2.0)
+Imports:
+	CohortDiagnostics (>= 2.0.0),
+    OhdsiSharing,
+    ParallelLogger
+Suggests:
+    knitr,
+    rmarkdown,
+    ROhdsiWebApi,
+    OhdsiRTools
+License: Apache License 2.0
+VignetteBuilder: knitr
+LazyData: TRUE
+RoxygenNote: 7.1.1
