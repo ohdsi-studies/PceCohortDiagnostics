@@ -10,7 +10,9 @@ Depends:
 Imports:
 	CohortDiagnostics (>= 2.0.0),
     OhdsiSharing,
-    ParallelLogger
+    ParallelLogger,
+    SqlRender,
+    readr
 Suggests:
     knitr,
     rmarkdown,

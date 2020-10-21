@@ -110,6 +110,7 @@ runCohortDiagnostics <- function(packageName = "examplePackage",
                                             inclusionStatisticsFolder = file.path(outputFolder,
                                                                                   "inclusionStatisticsFolder"),
                                             createCohortTable = TRUE, 
+                                            incremental = incremental,
                                             incrementalFolder = incrementalFolder)
     DatabaseConnector::disconnect(connection)
   }
