@@ -14,8 +14,8 @@
 
 
 # Load the package
-library(Ohdsi2020StudyathonCohortDiagnosticsPCE)
-package <- "Ohdsi2020StudyathonCohortDiagnosticsPCE"
+library(PceCohortDiagnostics)
+packageName <- "PceCohortDiagnostics"
 path <- "s:/results"
 
 # Optional: specify where the temporary files will be created:
@@ -46,27 +46,27 @@ databaseDescription <- "IBM MarketScan® Commercial Claims and Encounters Databa
 
 # Use this to run the cohorttDiagnostics. The results will be stored in the diagnosticsExport
 # subfolder of the outputFolder. This can be shared between sites.
-Ohdsi2020StudyathonCohortDiagnosticsPCE::runCohortDiagnostics(connectionDetails = connectionDetails,
-                                                              cdmDatabaseSchema = cdmDatabaseSchema,
-                                                              cohortDatabaseSchema = cohortDatabaseSchema,
-                                                              cohortTable = cohortTable,
-                                                              oracleTempSchema = oracleTempSchema,
-                                                              outputFolder = outputFolder,
-                                                              databaseId = databaseId,
-                                                              databaseName = databaseName,
-                                                              databaseDescription = databaseDescription,
-                                                              createCohorts = TRUE,
-                                                              runInclusionStatistics = TRUE,
-                                                              runIncludedSourceConcepts = TRUE,
-                                                              runOrphanConcepts = TRUE,
-                                                              runTimeDistributions = TRUE,
-                                                              runBreakdownIndexEvents = TRUE,
-                                                              runIncidenceRates = TRUE,
-                                                              runCohortOverlap = TRUE,
-                                                              runCohortCharacterization = TRUE,
-                                                              runTemporalCohortCharacterization = TRUE,
-                                                              packageName = package,
-                                                              minCellCount = 5)
+PceCohortDiagnostics::runCohortDiagnostics(connectionDetails = connectionDetails,
+                                           cdmDatabaseSchema = cdmDatabaseSchema,
+                                           cohortDatabaseSchema = cohortDatabaseSchema,
+                                           cohortTable = cohortTable,
+                                           oracleTempSchema = oracleTempSchema,
+                                           outputFolder = outputFolder,
+                                           databaseId = databaseId,
+                                           databaseName = databaseName,
+                                           databaseDescription = databaseDescription,
+                                           createCohorts = TRUE,
+                                           runInclusionStatistics = TRUE,
+                                           runIncludedSourceConcepts = TRUE,
+                                           runOrphanConcepts = TRUE,
+                                           runTimeDistributions = TRUE,
+                                           runBreakdownIndexEvents = TRUE,
+                                           runIncidenceRates = TRUE,
+                                           runCohortOverlap = TRUE,
+                                           runCohortCharacterization = TRUE,
+                                           runTemporalCohortCharacterization = TRUE,
+                                           packageName = packageName,
+                                           minCellCount = 5)
 
 # To view the results: Optional: if there are results zip files from multiple sites in a folder, this
 # merges them, which will speed up starting the viewer:
