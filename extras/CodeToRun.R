@@ -86,6 +86,12 @@ CohortDiagnostics::launchDiagnosticsExplorer(file.path(outputFolder, "diagnostic
 # *******************************************************
 #
 # Upload results to the OHDSI SFTP server:
+userName <- "study-data-site-proteus"
 uploadResults(outputFolder, keyFileName, userName)
 
+# privateKeyFileName   A character string denoting the path to the RSA private key provided by the study coordinator.
+# userName             A character string containing the user name provided by the study coordinator.
+# outputFolder         Name of local folder where the results were generated; make sure to use forward slashes
+#                      (/). 
+#                     
 # Please send the study-coordinator an e-mail when done
